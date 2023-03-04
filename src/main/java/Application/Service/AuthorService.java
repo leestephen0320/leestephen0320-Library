@@ -10,7 +10,7 @@ import java.util.List;
  * persistence layer (DAO). That means that the Service class performs tasks that aren't done through the web or
  * SQL: programming tasks like checking that the input is valid, conducting additional security checks, or saving the
  * actions undertaken by the API to a logging file.
- *
+ * 
  * It's perfectly normal to have Service methods that only contain a single line that calls a DAO method. An
  * application that follows best practices will often have unnecessary code, but this makes the code more
  * readable and maintainable in the long run!
@@ -40,7 +40,7 @@ public class AuthorService {
      * @return all authors
      */
     public List<Author> getAllAuthors() {
-        return null;
+        return authorDAO.getAllAuthors();
     }
     /**
      * TODO: Use the AuthorDAO to persist an author. The given Author will not have an id provided.
@@ -49,6 +49,6 @@ public class AuthorService {
      * @return The persisted author if the persistence is successful.
      */
     public Author addAuthor(Author author) {
-        return null;
+        return authorDAO.insertAuthor(author);
     }
 }
